@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTAL DE NOTÍCIAS GALATICO</title>
     <link rel="stylesheet" href="styles/card.css">
-    <script src="src/Components/CardNews.js" defer></script>
+    <script src="src/Components/CardNews.js" defer></script> <!--Importa o script do component-->
+    <script src="src/Components/TituloDinamico.js" defer></script>
     <!--defer: anexa o componente somente depois que o DOM foi carregado -->
 </head>
 <body>
-    <div class="container">
+    <div class="app-root">
+
+    </div>
+    <!--Modo antigo
         <div class="card">
             <div class="card__left">
                 <span>By Marielle Cristina</span>
@@ -20,7 +24,27 @@
                 <img src="assets/darth-vader.jpg" alt="">
             </div>
         </div>
+    -->
+
+
+    <card-news 
+        autor="Marielle"
+        title="Darth Vender Contrata"
+        link-url="www.google.com"
+        photo = "assets/darth-vader.jpg"
+        content="Desenvolvedores serão contratados"
+        ></card-news> <!--Usa o componente-->
+
+    <card-news 
+    autor="Livielle"
+    title="O ceu azul"
+    link-url="www.google.com"
+    content="O céu tem estrelas e um sol"
+    ></card-news>
+
+    <titulo-dinamico titulo="Novo Urgente"></titulo-dinamico>
+    <titulo-dinamico titulo="Novo"></titulo-dinamico>
+
     </div>
-    <card-news></card-news>
 </body>
 </html>
