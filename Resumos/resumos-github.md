@@ -23,7 +23,13 @@ touch nome-arquivo.extensao --> criar arquivos, por linha de comando
 
 - git restore nome-arquivo --> descarta as alterações realizadas em um arquivo
 
-- git reset --> desfaz um commit, para isso usar git log para descobrir chave do commit, 
+- git reset --> desfaz um commit, para isso usar git log para descobrir chave do commit,
+
+- git push -u origin nome-branch --> subir alterações do repositório local, para o remoto
+
+- git pull --> mescla as alterações do repositórios remoto com o local
+
+- git checkout -b nome-branch --> muda para a branch indicada
 
 - remote origin = nome do servidor onde foi clonao o arquivo
 - arquivo .gitkeep --> usado para o reconhecimento de pastas vazias
