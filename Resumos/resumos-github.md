@@ -15,11 +15,15 @@ touch nome-arquivo.extensao --> criar arquivos, por linha de comando
 - git add nome-arquivo --> Adiciona o arquivo na área de preparação para subir o arquivo para o repositório remoto, se no lugar do arquivo colocar um . considera todos os arquivos
 
 - git commit -m"Mensagem" --> Envia as alterações para o repositório remoto
+- git commit --amend -m"Nova mensagem" --> Alterar a mensagem do último commit
 
 - echo nome-pasta > .gitignore --> move a pasta para gitignore, que não faz upload e nem solicita commit dos arquivos
 
 - git log --> Exibe o log de commits
 
+- git restore nome-arquivo --> descarta as alterações realizadas em um arquivo
+
+- git reset --> desfaz um commit, para isso usar git log para descobrir chave do commit, 
 
 - remote origin = nome do servidor onde foi clonao o arquivo
 - arquivo .gitkeep --> usado para o reconhecimento de pastas vazias
