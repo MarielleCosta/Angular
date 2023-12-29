@@ -15,6 +15,13 @@ Estudos Angular
     - Untracked files: arquivos que o git não conhece, eles não foram commitados antes
 touch nome-arquivo.extensao --> criar arquivos, por linha de comando
 
+- git add nome-arquivo --> Adiciona o arquivo na área de preparação para subir o arquivo para o repositório remoto
+
+- git commit -m"Mensagem" --> Envia as alterações para o repositório remoto
+
+- git log --> Exibe o log de commits
+
+
 - remote origin = nome do servidor onde foi clonao o arquivo
 
 ## 📑 MARKDOWN
