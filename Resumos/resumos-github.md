@@ -32,12 +32,12 @@ touch nome-arquivo.extensao --> criar arquivos, por linha de comando
 
 - git reset --> desfaz um commit, para isso usar git log para descobrir chave do commit,
 
-- git push -u origin nome-branch --> subir alterações do repositório local, para o remoto
+- git push origin nome-branch --> subir alterações do repositório local, para o remoto
 
 - git pull --> mescla as alterações do repositórios remoto com o local
 
 - git checkout -b nome-branch --> muda para a branch indicada, se a branch não existir vai ser criada
--git checkout nome-branch --> volta para a branch
+- git checkout nome-branch --> volta para a branch
 
 - remote origin = nome do servidor onde foi clonao o arquivo
 - arquivo .gitkeep --> usado para o reconhecimento de pastas vazias
