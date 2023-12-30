@@ -16,6 +16,7 @@ _defer:_ anexa o componente somente depois que o DOM foi carregado
 
 - [Verificar a compatibilidade de navegadores com a Shadow DOM](https://caniuse.com/)
 
-## 🎫 
+## 🎫 Typescript
+JavaScript com recursos adicionais, como por exemplo a indicação de erros em tempo de desenvolvimento e o uso de tipagem. Ele passa pelo processo de transpilação ele traduz para JavaScript e compila.
 
 
