@@ -22,19 +22,24 @@ JavaScript com recursos adicionais, como por exemplo a indicação de erros em t
 - Extensão: **.ts**
 
 - Instalar o typescript somente para o desenvolvimento (-D)
+
 ```npm install typescript -D ```
 
 - Traduzir o código de typescript para javascript, para executar no node. Esse comando irá gerar um arquivo .js
+
 ```npx tsc caminho/nome_aqruiv.ts ```
 
 - Criar um arquivo de configuração (tsconfig.json), [explicação sobre](https://www.typescriptlang.org/tsconfig). Após essa configuração pode usa o comando somente _npc tsc_ que ele já converte todos os arquivos .ts.
+
 ```npx tsc --init ```
 
 No arquivo de configuração tsconfig.json é bom configurar rootDir e outDir, para definir, respectivamente, a raiz e a pasta que o arquivo .js será salvo.
 
 - Criar um arquivo package.json na raiz, como a escrita a seguir, permite a execução com somente um comando _npm run start_:
-```{
+```
+{
 "scripts":{
     "start": "npx tsc && node build/index.js"
 }
-}```
+}
+```
