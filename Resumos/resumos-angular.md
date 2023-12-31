@@ -27,7 +27,7 @@ JavaScript com recursos adicionais, como por exemplo a indicação de erros em t
 
 - Traduzir o código de typescript para javascript, para executar no node. Esse comando irá gerar um arquivo .js
 
-```npx tsc caminho/nome_aqruiv.ts ```
+```npx tsc caminho/nome_arquivo.ts ```
 
 - Criar um arquivo de configuração (tsconfig.json), [explicação sobre](https://www.typescriptlang.org/tsconfig). Após essa configuração pode usa o comando somente _npc tsc_ que ele já converte todos os arquivos .ts.
 

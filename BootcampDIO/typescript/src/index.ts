@@ -75,4 +75,63 @@ function addToHello(name:string):string{
     return `Hello ${name}`;
 }
 
-console.log(addToHello("Marielle"))
+console.log(addToHello("Marielle"));
+
+//O parâmetro da função pode ser um número ou string
+function CallToPhone(phone:number | string): number|string{
+    return phone;
+}
+
+console.log(CallToPhone("3199178617"));
+console.log(CallToPhone(31991));
+
+//Funções assíncronas - elas podem esperar alguma coisa
+//Promise é o return da função async
+async function getDatabase(id:number):Promise<string>{
+    return "Marielle";
+}
+
+//interfaces (trabalhar com classes e estabelecer parâmetros) x type(tipar ou constantes)
+//Readonly permite a definição do atributo somente uma vez na criação, depois não tem como alterar
+type robot = {
+    readonly id: number | string; 
+    name:string;
+};
+
+const bot1: robot={
+    id:31,
+    name: "biz"
+};
+
+interface robot2{
+    readonly id: number | string,
+    name:string;
+    sayHello():string;
+}
+
+const bot2:robot2 ={
+    id: 1,
+    name: "megamen",
+    sayHello: function (): string {
+        throw new Error("Function not implemented.");
+    }
+};
+
+console.log(bot1);
+console.log(bot2);
+
+class Pessoa implements robot2{
+    id: string | number;
+    name: string;
+
+    constructor(id:string|number, name:string){
+        this.id = id
+        this.name = name
+    }
+    sayHello(): string {
+        return "hello";
+    }
+}
+
+const p = new Pessoa(1, "Maria")
+console.log(p.sayHello());
