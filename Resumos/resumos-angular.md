@@ -43,3 +43,8 @@ No arquivo de configuração tsconfig.json é bom configurar rootDir e outDir, p
 }
 }
 ```
+
+- Criar um servidor local que entende typescript
+
+```npm install ts-node-dev -D```
+Adicionar o comando no arquivo de configuração, para simplificar a transpilação e não gerar build: _"start:dev":"ts-node-dev --respawn --transpile-only src/index.ts". Em seguida, usar o comando ```npm run start:dev```

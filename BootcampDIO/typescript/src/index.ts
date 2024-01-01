@@ -135,3 +135,63 @@ class Pessoa implements robot2{
 
 const p = new Pessoa(1, "Maria")
 console.log(p.sayHello());
+
+//classes
+/* data modifiers - válido para atributos e propriedade
+    public --> propriedade pode ser acessada fora da classe (default)
+    private --> propriedade só pode ser acessada dentro da classe
+    protected --> propriedade pode ser acessada pela classe e suas subclasses
+
+    readonly = permite a alteração somente na criação
+*/
+
+class Personagem{
+    private name?:string;
+    stregth:number;
+    skill: number;
+
+    constructor(name:string, stregth:number,skill:number){
+        this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+
+    attack():void{
+        console.log(`Attack with ${this.stregth} points`);
+    } 
+}
+
+const p1 = new Personagem("Ryu",10, 8);
+console.log(p1);
+console.log(p1.attack());
+
+//subclasses
+//Magician é uma subclass que herda a classe/superclass Personagem
+class Magician extends Personagem{
+    magicPoints:number;
+    constructor(
+        name:string, 
+        stregth:number, 
+        skill:number, 
+        magicPoints:number){
+        super(name, stregth, skill) //Chama o construtor da superclass
+        this.magicPoints = magicPoints;
+    }
+}
+
+const p2 = new Magician("Mago", 9,30,100);
+console.log(p2);
+
+//generics: permite escolher o tipo <T>
+//... indica que pode ser 1 ou mais itens
+function concatArray<T>(...itens:T[]):T[]{
+    return new Array().concat(...itens);
+}
+
+const numArray = concatArray<number[]>([1,5],[3]);
+const stgArray = concatArray<string[]>(["Marielle", "Mariana"], ["Julia"]);
+console.log(numArray);
+console.log(stgArray);
+
+let dado: string = "marielle cristina";
+console.log(dado);

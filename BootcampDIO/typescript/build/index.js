@@ -93,3 +93,43 @@ class Pessoa {
 }
 const p = new Pessoa(1, "Maria");
 console.log(p.sayHello());
+//classes
+/* data modifiers - válido para atributos e propriedade
+    public --> propriedade pode ser acessada fora da classe (default)
+    private --> propriedade só pode ser acessada dentro da classe
+    protected --> propriedade pode ser acessada pela classe e suas subclasses
+
+    readonly = permite a alteração somente na criação
+*/
+class Personagem {
+    constructor(name, stregth, skill) {
+        this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+    attack() {
+        console.log(`Attack with ${this.stregth} points`);
+    }
+}
+const p1 = new Personagem("Ryu", 10, 8);
+console.log(p1);
+console.log(p1.attack());
+//subclasses
+//Magician é uma subclass que herda a classe/superclass Personagem
+class Magician extends Personagem {
+    constructor(name, stregth, skill, magicPoints) {
+        super(name, stregth, skill); //Chama o construtor da superclass
+        this.magicPoints = magicPoints;
+    }
+}
+const p2 = new Magician("Mago", 9, 30, 100);
+console.log(p2);
+//generics
+//... indica que pode ser 1 ou mais itens
+function concatArray(...itens) {
+    return new Array().concat(...itens);
+}
+const numArray = concatArray([1, 5], [3]);
+const stgArray = concatArray(["Marielle", "Mariana"], ["Julia"]);
+console.log(numArray);
+console.log(stgArray);
