@@ -1,4 +1,10 @@
 "use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -124,7 +130,7 @@ class Magician extends Personagem {
 }
 const p2 = new Magician("Mago", 9, 30, 100);
 console.log(p2);
-//generics
+//generics: permite escolher o tipo <T>
 //... indica que pode ser 1 ou mais itens
 function concatArray(...itens) {
     return new Array().concat(...itens);
@@ -133,3 +139,28 @@ const numArray = concatArray([1, 5], [3]);
 const stgArray = concatArray(["Marielle", "Mariana"], ["Julia"]);
 console.log(numArray);
 console.log(stgArray);
+let dado = "marielle cristina";
+console.log(dado);
+//decorators
+function ExibirNome(target) {
+    console.log(target);
+}
+let Funcionario = class Funcionario {
+};
+Funcionario = __decorate([
+    ExibirNome
+], Funcionario);
+//factory: função que retorna outra função
+function apiVersion(version) {
+    return (target) => {
+        Object.assign(target.prototype, { __version: version, __name: "marielle" });
+    };
+}
+let Api = class Api {
+};
+Api = __decorate([
+    apiVersion("1.10")
+], Api);
+const api = new Api();
+console.log(api.__version);
+console.log(api.__name);

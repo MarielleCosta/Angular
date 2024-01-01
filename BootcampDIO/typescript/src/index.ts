@@ -195,3 +195,60 @@ console.log(stgArray);
 
 let dado: string = "marielle cristina";
 console.log(dado);
+
+//decorators --> executa uma ação sempre que um gatilho é ativado
+function ExibirNome(target: any){ //--> Essa é a função decorada (decorator)
+    console.log(target);
+}
+@ExibirNome //--> Esse é o gatilho da função decorada (decorator)
+class Funcionario{}
+
+@ExibirNome
+class Quincas{}
+
+//class decoratior
+//factory: função que retorna outra função
+function apiVersion(version: string){
+    return (target: any)=> {
+        Object.assign(target.prototype,{__version:version, __name:"marielle"});
+    };
+}
+
+// @apiVersion("1.10")
+// const api = new Api();
+// console.log(api.__version);
+// console.log(api.__name);
+
+//attribute decorator
+function minLength(length:number){
+    return(target:any,key:string)=>{
+        let _value = target[key];
+        // console.log(target[key]);
+        // console.log(key);
+
+        //Sobrescreve as propriedades get e set
+        const getter = () => _value;
+        const setter = (value:string)=>{
+            if (value.length < length){
+                throw new Error(`Tamanho menor do que ${length}`);
+            }else{
+                _value = value;
+            }
+        };
+
+        Object.defineProperty(target, key,{
+            get: getter,
+            set:setter,
+        });
+    };
+}
+
+class Api{
+    @minLength(3)
+    name:string
+    constructor(name:string){
+        this.name = name;
+    }
+}
+const api = new Api("usuarios");
+console.log(api.name);

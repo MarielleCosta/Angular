@@ -19,6 +19,8 @@ _defer:_ anexa o componente somente depois que o DOM foi carregado
 ## 🎫 Typescript
 JavaScript com recursos adicionais, como por exemplo a indicação de erros em tempo de desenvolvimento e o uso de tipagem. Ele passa pelo processo de transpilação ele traduz para JavaScript e compila.
 
+- [Material de apoio](https://github.com/felipeAguiarCode/angular-playground/tree/main/C2%20-%20Typescript%20para%20Angular)
+
 - Extensão: **.ts**
 
 - Instalar o typescript somente para o desenvolvimento (-D)
@@ -48,4 +50,8 @@ No arquivo de configuração tsconfig.json é bom configurar rootDir e outDir, p
 
 ```npm install ts-node-dev -D```
 
-Adicionar o comando no arquivo de configuração, para simplificar a transpilação e não gerar build: _"start:dev":"ts-node-dev --respawn --transpile-only src/index.ts"_. Em seguida, usar o comando ```npm run start:dev```
+Adicionar o comando no arquivo de configuração, para simplificar a transpilação e não gerar build: 
+
+```"start:dev":"ts-node-dev --respawn --transpile-only src/index.ts"
+```
+Em seguida, usar o comando ```npm run start:dev```
