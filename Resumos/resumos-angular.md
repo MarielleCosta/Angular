@@ -38,6 +38,8 @@ JavaScript com recursos adicionais, como por exemplo a indicação de erros em t
 No arquivo de configuração tsconfig.json é bom configurar rootDir e outDir, para definir, respectivamente, a raiz e a pasta que o arquivo .js será salvo.
 
 - Criar um arquivo package.json na raiz, como a escrita a seguir, permite a execução com somente um comando _npm run start_:
+
+
 ```
 {
 "scripts":{
@@ -52,6 +54,7 @@ No arquivo de configuração tsconfig.json é bom configurar rootDir e outDir, p
 
 Adicionar o comando no arquivo de configuração, para simplificar a transpilação e não gerar build: 
 
-```"start:dev":"ts-node-dev --respawn --transpile-only src/index.ts"
+```
+"start:dev":"ts-node-dev --respawn --transpile-only src/index.ts"
 ```
 Em seguida, usar o comando ```npm run start:dev```
