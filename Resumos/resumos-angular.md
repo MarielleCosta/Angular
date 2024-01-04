@@ -60,3 +60,14 @@ Adicionar o comando no arquivo de configuração, para simplificar a transpilaç
 "start:dev":"ts-node-dev --respawn --transpile-only src/index.ts"
 ```
 Em seguida, usar o comando ```npm run start:dev```
+
+
+## Camadas de uma Web APP
+
+- Componentes
+
+- Gerenciamento de estados
+
+- Roteamento
+
+- Renderização
