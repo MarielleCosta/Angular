@@ -14,6 +14,8 @@ Cada elemento abaixo de um elemento é o filho e o acima é o pai, sendo que a r
 
 _defer:_ anexa o componente somente depois que o DOM foi carregado
 
+**SPAs:** Single Page Applications (SPA) são aplicações cuja funcionalidade está concentrada em uma única página. Assim, pra se ter mais de uma páginas são substituídos os componentes em uma mesma página.
+
 - [Verificar a compatibilidade de navegadores com a Shadow DOM](https://caniuse.com/)
 
 ## 🎫 Typescript

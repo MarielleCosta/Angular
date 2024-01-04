@@ -34,7 +34,7 @@ touch nome-arquivo.extensao --> criar arquivos, por linha de comando
 
 - git push origin nome-branch --> subir alterações do repositório local, para o remoto
 
-- git pull --> mescla as alterações do repositórios remoto com o local
+- git pull origin nome-branch --> mescla as alterações do repositórios remoto com o local, no repositório local
 
 - git checkout -b nome-branch --> muda para a branch indicada, se a branch não existir vai ser criada
 - git checkout nome-branch --> volta para a branch
