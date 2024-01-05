@@ -49,3 +49,5 @@ touch nome-arquivo.extensao --> criar arquivos, por linha de comando
 
 # 📑 MARKDOWN
 - [Informações sobre como usar markdown](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+
+- [Site de icons](https://www.flaticon.com/br/)

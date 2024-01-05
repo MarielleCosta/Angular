@@ -1,4 +1,5 @@
 # Angular
+- [Site Angular](https://angular.io/)
 - [Help](https://github.com/felipeAguiarCode/angular-playground/tree/main/C1%20-%20Web%20Components)
 
 ## 🌐 DOM - Document Objetc Model
@@ -62,12 +63,19 @@ Adicionar o comando no arquivo de configuração, para simplificar a transpilaç
 Em seguida, usar o comando ```npm run start:dev```
 
 
-## Camadas de uma Web APP
+## 📚 Camadas de uma Web APP
 
-- Componentes
+- Componentes: Elemento visual, custimzável e reutilizável. _Exemplo:_ um card ou botão na tela.
 
-- Gerenciamento de estados
+- Gerenciamento de estados (States): Respons´vael por garantir que as info. dos componentes não estão dessincronizadas e facilitar a comunicação de um componente com outro. _Exemplo:_ Atualizar carrinho de compras ao clicar no botão de compra de um produto. 
 
-- Roteamento
+- Roteamento (Route/Navigation): Responsável pela forma de navegar fazendo a troca de URL sem recarregar a página, mudando somente os componente que são mostrados
 
-- Renderização
+- Renderização (Render):  Responsável por decidir a melhor maneira de acessar e entregar para o browser o componente pronto (routes, components e states) para que ele seja desenhado na janela sem complicações.
+Tipos: 
+    - 100% Server: o servidor entrega exatamente o precisa
+    - Parte server e parte client: o servidor entrega uma parte e o cliente faz o resto
+    - 100% Client: o cliente recebe os dados e monta tudo
+
+
+Códigos são salvos na pasta **src** e os demais arquivos são salvos fora.
