@@ -1,6 +1,7 @@
 # Angular
 - [Site Angular](https://angular.io/)
 - [Help](https://github.com/felipeAguiarCode/angular-playground/tree/main/C1%20-%20Web%20Components)
+- [Editor online](https://stackblitz.com/)
 
 ## 🌐 DOM - Document Objetc Model
 Árvore de tags geradas para o navegador  compreender as tags HTML
@@ -78,4 +79,18 @@ Tipos:
     - 100% Client: o cliente recebe os dados e monta tudo
 
 
-Códigos são salvos na pasta **src** e os demais arquivos são salvos fora.
+Códigos são salvos na pasta **src** e os demais arquivos (de configuração) são salvos fora.
+- index-html: aponta para o componente raiz, arquivo final que aponta para o componente
+- main.ts: inicializar o projeto e os componentes
+- polyfills.ts: configurações para melhorar a compatibilidade com navgeadores antigos
+- styles.css: estilização
+
+- Pasta app:
+    - app.component.css: estilização do componente
+    - app.component.ts: definição do componente
+    - nome_componente.component.ts: funcionalidade do componente configurada
+
+- Injeção de dependência: padrão/estratégia de desenvolvimento
+
+
+PAREI: Comparando com estrutura de arquivo React e Vue
