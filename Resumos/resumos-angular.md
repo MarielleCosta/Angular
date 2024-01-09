@@ -78,6 +78,7 @@ Tipos:
     - Parte server e parte client: o servidor entrega uma parte e o cliente faz o resto
     - 100% Client: o cliente recebe os dados e monta tudo
 
+- [Stackblitz: editor online de Angular](https://stackblitz.com/edit/stackblitz-starters-ehjkhh?description=An%20angular-cli%20project%20based%20on%20@angular/animations,%20@angular/common,%20@angular/compiler,%20@angular/core,%20@angular/forms,%20@angular/platform-browser,%20@angular/platform-browser-dynamic,%20@angular/router,%20core-js,%20rxjs,%20tslib%20and%20zone.js&file=src%2Fmain.ts&title=Angular%20Starter)
 
 Códigos são salvos na pasta **src** e os demais arquivos (de configuração) são salvos fora.
 - index-html: aponta para o componente raiz, arquivo final que aponta para o componente
@@ -86,11 +87,23 @@ Códigos são salvos na pasta **src** e os demais arquivos (de configuração) s
 - styles.css: estilização
 
 - Pasta app:
-    - app.component.css: estilização do componente
-    - app.component.ts: definição do componente
+    - app.component.css: estilização do componente, arquivo a nível de escopo
+    - app.component.ts: definição do componente em typescript
+
+``` 
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+```
+
+        - O selector identifica o nome do componente, o templateUrl informa de onde está a base HTML do componente
+
     - nome_componente.component.ts: funcionalidade do componente configurada
 
 - Injeção de dependência: padrão/estratégia de desenvolvimento
 
 
-PAREI: Comparando com estrutura de arquivo React e Vue
