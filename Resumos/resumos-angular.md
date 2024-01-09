@@ -88,6 +88,7 @@ Códigos são salvos na pasta **src** e os demais arquivos (de configuração) s
 
 - Pasta app:
     - app.component.css: estilização do componente, arquivo a nível de escopo
+    - nome_componente.component.ts: funcionalidade do componente configurada
     - app.component.ts: definição do componente em typescript. O selector identifica o nome do componente, o templateUrl informa de onde está a base HTML do componente
 
 ``` 
@@ -99,9 +100,6 @@ Códigos são salvos na pasta **src** e os demais arquivos (de configuração) s
 })
 
 ```
-
-
-    - nome_componente.component.ts: funcionalidade do componente configurada
 
 - Injeção de dependência: padrão/estratégia de desenvolvimento
 
