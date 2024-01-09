@@ -89,9 +89,10 @@ Códigos são salvos na pasta **src** e os demais arquivos (de configuração) s
 - Pasta app:
     - app.component.css: estilização do componente, arquivo a nível de escopo
     - nome_componente.component.ts: funcionalidade do componente configurada
-    - app.component.ts: definição do componente em typescript. O selector identifica o nome do componente, o templateUrl informa de onde está a base HTML do componente
+    - app.component.ts: definição do componente em typescript. O selector identifica o nome do componente, o templateUrl informa de onde está a base HTML do componente, mas também pode já ter definido o arquivo, mas se chamará somente template, o mesmo com o arquivo de estilo
 
 ``` 
+import {Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -99,8 +100,24 @@ Códigos são salvos na pasta **src** e os demais arquivos (de configuração) s
   styleUrls: ['./app.component.css']
 })
 
+export class MeuComponente{
+
+}
+
+```
+
+- No arquivo app.module.ts é necessário colocar:
+
+``` 
+import {NomeComponent} from './pasta geral/nome arquivo ts sem extensão';
+
+@Ngmodule({
+    imports:[nome classe do arquivo ts]
+})
 ```
 
 - Injeção de dependência: padrão/estratégia de desenvolvimento
 
+
+PAREI: Criando a estrutura de um componente
 
