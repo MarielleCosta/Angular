@@ -116,6 +116,10 @@ import {NomeComponent} from './pasta geral/nome arquivo ts sem extensão';
 })
 ```
 
+## Comandos
+```ng generate componente nomecomponent``` / ```ng g c nomecomponent``` ; gera os arquivos necessários para um novo componente 
+
+
 - Injeção de dependência: padrão/estratégia de desenvolvimento
 
 
